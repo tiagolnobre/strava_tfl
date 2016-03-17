@@ -1,0 +1,15 @@
+app: http://localhost:9292
+strava_api: https://www.strava.com
+
+authentication:
+  client_id: 1111
+  response_type: code
+  scope: write
+  state: login
+  redirect_uri: /authorization
+  client_secret: 3ea164a7722a2a9093123b2f1c681954ff906fb8
+
+endpoint:
+authorize: /oauth/authorize
+deauthorization: /oauth/deauthorize
+token_exchange: /oauth/token
