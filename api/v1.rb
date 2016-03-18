@@ -12,7 +12,7 @@ module StravaTFL
     mount Athlete
     mount Activities
     mount Ping
-
+  
     route :any, '*path' do
       raise Strava::Api::V3::ClientError.new(404, '{"message":"Not Found"}')
     end

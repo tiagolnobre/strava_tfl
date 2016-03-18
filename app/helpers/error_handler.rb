@@ -1,11 +1,10 @@
-require "erb"
 class ApiErrorHandler < Grape::Middleware::Error
   def call!(env)
     @env = env
     begin
       @app.call(@env)
     rescue Exception => e
-      # binding.remote_pry
+      binding.remote_pry
       case e.http_status
       when 401, 404, 500
         @error = JSON.parse(e.response_body) || e.message

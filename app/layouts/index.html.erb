@@ -1,0 +1,11 @@
+<html>
+ <head>
+  <title>How much do i save (Strava)</title>
+</head>
+ <body>
+  <h1>Web API</h1>
+  <a href=<%= "#{StravaTFL::CONFIG_FILE['endpoint']['strava_api']}#{StravaTFL::CONFIG_FILE['endpoint']['authorize']}?client_id=#{StravaTFL::CONFIG_FILE['authentication']['client_id']}&response_type=code&redirect_uri=#{StravaTFL::CONFIG_FILE['app']}#{StravaTFL::CONFIG_FILE['endpoint']['callback']}&scope=write&state=mystate&approval_prompt=force" %>>
+   <img src="images/LogInWithStrava.png">
+  </a>
+ </body>
+</html>

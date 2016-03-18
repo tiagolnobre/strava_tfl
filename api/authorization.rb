@@ -14,7 +14,7 @@ module StravaTFL
       end
 
       def request_token
-        uri = URI.parse("#{CONFIG_FILE["strava_api"]}#{CONFIG_FILE["token_exchange"]}")
+        uri = URI.parse("#{CONFIG_FILE["endpoint"]["strava_api"]}#{CONFIG_FILE["endpoint"]["token_exchange"]}")
         @request_token ||= Net::HTTP.post_form(uri, { "client_id" => CONFIG_FILE["authentication"]["client_id"],
                                                       "client_secret" => CONFIG_FILE["authentication"]["client_secret"],
                                                       "code" => request.env["rack.request.query_hash"]["code"]})
