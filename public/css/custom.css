@@ -1,0 +1,79 @@
+.navbar {
+  background-color: transparent;
+  background: transparent;
+  border-width: 0px;
+}
+body {
+  margin: 0;
+  /*background-image: url(../images/10013330_633776706701206_865312681_n.jpg);*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-color: #eceeef;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: compact;
+}
+
+/*.bg-img {
+    background-image:url('http://placehold.it/200x200');
+    background-repeat:repeat-x;
+    background-size: 100%;
+}
+
+.bg-img2 {
+    background-image:url(../images/IMG_1833.JPG);
+    background-repeat:repeat-x;
+    background-size: 100%;
+}
+
+.cont {
+     background-image: url(../images/IMG_1833.JPG);
+}*/
+
+
+.im {
+  background-color: #f7f7f9;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.jumbotron {
+display: table;
+  background-image: url(../images/10013330_633776706701206_865312681_n.jpg);
+    min-height: 700px;
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center 40%;
+    /*.vertical-center {*/
+  /*min-height: 100%;  /* Fallback for browsers do NOT support vh unit */*/
+  /*min-height: 100vh; /* These two lines are counted as one :-)       */*/
+ /*transform: translateY(-50%);*/
+  /*display: flex;*/
+  /*align-items: center;*/
+}
+
+.inside {
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*vertical-align: bottom;*/
+    display: table-cell;
+vertical-align: bottom;
+
+}
+
+/*// Class
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}*/
+
+.kk {
+  /*display: table;*/
+   /*position:absolute;*/
+  height:100%;
+  width:100%;
+}

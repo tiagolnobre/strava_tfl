@@ -1,4 +1,5 @@
-app: https://stravatfl.herokuapp.com
+# app: https://stravatfl.herokuapp.com
+app: http://localhost:9393
 
 
 authentication:

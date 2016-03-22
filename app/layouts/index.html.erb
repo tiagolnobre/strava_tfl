@@ -1,11 +1,55 @@
-<html>
- <head>
-  <title>How much do i save (Strava)</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>How much do i save (Strava)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
 </head>
- <body>
-  <h1>Web API</h1>
-  <a href=<%= "#{StravaTFL::CONFIG_FILE['endpoint']['strava_api']}#{StravaTFL::CONFIG_FILE['endpoint']['authorize']}?client_id=#{StravaTFL::CONFIG_FILE['authentication']['client_id']}&response_type=code&redirect_uri=#{StravaTFL::CONFIG_FILE['app']}#{StravaTFL::CONFIG_FILE['endpoint']['callback']}&scope=write&state=mystate&approval_prompt=force" %>>
-   <img src="images/LogInWithStrava.png">
-  </a>
- </body>
+<body>
+  <nav class="navbar navbar-light bg-faded">
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <button class="navbar-toggler" type="button">&#9776;
+          <b>STRAVA-TFL</b>
+        </button>
+      </li>
+      <div class="container-fluid pull-xs-right">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <h5>Home</h5>
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="docs/v1.json">
+            <h5>API Docs</h5>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <h5>About</h5>
+          </a>
+        </li>
+      </div>
+    </ul>
+  </nav>
+  <div class="container-fluid kk">
+    <div class="jumbotron im text-xs-center kk">
+      <div class="inside">
+        <h1>Web API</h1>
+        <a
+          href=<%= "#{StravaTFL::CONFIG_FILE['endpoint']['strava_api']}#{StravaTFL::CONFIG_FILE['endpoint']['authorize']}?client_id=#{StravaTFL::CONFIG_FILE['authentication']['client_id']}&response_type=code&redirect_uri=#{StravaTFL::CONFIG_FILE['app']}#{StravaTFL::CONFIG_FILE['endpoint']['callback']}&scope=write&state=mystate&approval_prompt=force" %>>
+          <img src="images/LogInWithStrava.png">
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+</body>
 </html>
