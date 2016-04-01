@@ -5,7 +5,6 @@
 }
 body {
   margin: 0;
-  /*background-image: url(../images/10013330_633776706701206_865312681_n.jpg);*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,21 +16,21 @@ body {
   display: compact;
 }
 
-/*.bg-img {
-    background-image:url('http://placehold.it/200x200');
-    background-repeat:repeat-x;
-    background-size: 100%;
+#post-title a:before {
+
+    font-family: FontAwesome;
+    content: "\f0c4";
+
 }
 
-.bg-img2 {
-    background-image:url(../images/IMG_1833.JPG);
-    background-repeat:repeat-x;
-    background-size: 100%;
-}
+	h2 {
+    color: #ffffff;
+  font-size: 4em;
+  line-height: 1.25em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
 
-.cont {
-     background-image: url(../images/IMG_1833.JPG);
-}*/
+	}
 
 
 .im {
