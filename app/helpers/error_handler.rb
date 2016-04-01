@@ -4,15 +4,23 @@ class ApiErrorHandler < Grape::Middleware::Error
     begin
       @app.call(@env)
     rescue Exception => e
-      case e.http_status
-      when 401, 404, 500
-        @error = JSON.parse(e.response_body) || e.message
-        raw = File.read(File.expand_path('../../../app/layouts/error.html.erb', __FILE__))
+      raw = File.read(File.expand_path('../../../app/layouts/error.html.erb', __FILE__))
 
-        [e.http_status, { 'Content-Type' => "text/html" }, [ERB.new(raw).result(binding)]]
+      status = if defined?(e.http_status)
+         e.http_status
+       elsif defined?(e.status)
+         e.status
+       else
+         500
+       end
+
+      case status
+      when 400, 401, 404
+        @error = {"message" => e.message}
       else
-        [e]
+        @error = {"message" => "Undefined error", "errors" => "Internal Server Error"}
       end
+      [status, { 'Content-Type' => "text/html" }, [ERB.new(raw).result(binding)]]
     end
   end
 end
