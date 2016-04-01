@@ -6,7 +6,7 @@ authentication:
   scope: write
   state: login
   redirect_uri: /authorization
-  client_secret: 3ea164a7722a2a9093123b2f1c681954ff906fb8
+  client_secret:
 
 endpoint:
   strava_api: https://www.strava.com
