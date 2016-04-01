@@ -9,11 +9,11 @@ module StravaTFL
     end
 
     namespace :api do
-      get '' do
+      get do
         redirect "docs/v1.json"
       end
 
-      #fix redirect
+      desc "documentation"
       get 'v1' do
         redirect "../docs/v1.json"
       end
