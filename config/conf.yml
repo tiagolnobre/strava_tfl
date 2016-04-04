@@ -1,4 +1,6 @@
+
 app: https://stravatfl.herokuapp.com
+# app: http://localhost:9393 
 
 authentication:
   client_id: 1111

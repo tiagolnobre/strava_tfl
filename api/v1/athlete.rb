@@ -16,7 +16,6 @@ class Athlete < Grape::API
       client.retrieve_current_athlete
     end
 
-
     get ':key' do
       client.retrieve_current_athlete.fetch(params[:key], {})
     end

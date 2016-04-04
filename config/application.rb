@@ -15,4 +15,7 @@ Dir[File.expand_path('../../api/*.rb', __FILE__)].each do |f|
   require f
 end
 
+CONFIG_FILE = YAML.load(File.read("#{File.join(File.dirname(__FILE__), '..', 'config')}/conf.yml"))
+CONFIG_FILE["authentication"]["client_secret"] = ENV["STRAVA_API_SECRET"]
+
 require 'api'
