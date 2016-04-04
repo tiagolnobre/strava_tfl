@@ -15,4 +15,8 @@ group :development do
   gem 'rake'
   gem 'rubocop'
   gem "pry-remote"
+  gem "rack-test"
+  gem "rspec-core"
+  gem "rspec"
+  gem 'webmock'
 end

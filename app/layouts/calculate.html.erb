@@ -8,7 +8,24 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/2.1.4/themes/smoothness/jquery-ui.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+        jQuery('#initialdate').datepicker();
+      })
+
+      jQuery(document).ready(function () {
+        jQuery('#finaldate').datepicker();
+      })
+    </script>
 
   </head>
 </head>
@@ -22,13 +39,13 @@
       </li>
       <div class="container-fluid pull-xs-right">
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="/">
             <h5>Home</h5>
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="calculate">
+          <a class="nav-link" href="#">
             <h5>Calculate</h5>
           </a>
         </li>
@@ -46,18 +63,23 @@
     </ul>
   </nav>
   <div class="container-fluid kk">
-    <div class="jumbotron jumbotron_index im text-xs-center kk">
-      <div class="inside">
-        <h2>How much are you saving?</h2>
-        <a
-          class="btn"
-          href=<%= "#{StravaTFL::CONFIG_FILE['endpoint']['strava_api']}#{StravaTFL::CONFIG_FILE['endpoint']['authorize']}?client_id=#{StravaTFL::CONFIG_FILE['authentication']['client_id']}&response_type=code&redirect_uri=#{StravaTFL::CONFIG_FILE['app']}#{StravaTFL::CONFIG_FILE['endpoint']['callback']}&scope=write&state=mystate&approval_prompt=force" %>>
-          <img src="images/LogInWithStrava.png" class="fa fa-2x">
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script> -->
+    <div class="jumbotron im text-xs-center kk">
+      <form>
+        Initial Data:
+        <input id="initialdate" type="text">
+      </p>
+      Final Date:
+      <input id="finaldate" type="text">
+    </p>
+    Daily price:
+    <input id="price" type="text">
+  </p>
+  <button id="calculate" type="button">Calculate</button>
+</form>
+</div>
+</div>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script> -->
 </body>
 </html>

@@ -39,40 +39,21 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.jumbotron {
+.jumbotron_index {
 display: table;
   background-image: url(../images/10013330_633776706701206_865312681_n.jpg);
-    min-height: 700px;
-    background-size:     cover;
-    background-repeat:   no-repeat;
-    background-position: center 40%;
-    /*.vertical-center {*/
-  /*min-height: 100%;  /* Fallback for browsers do NOT support vh unit */*/
-  /*min-height: 100vh; /* These two lines are counted as one :-)       */*/
- /*transform: translateY(-50%);*/
-  /*display: flex;*/
-  /*align-items: center;*/
+  min-height: 700px;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center 40%;
 }
 
 .inside {
-    /*position: absolute;*/
-    /*bottom: 0;*/
-    /*vertical-align: bottom;*/
-    display: table-cell;
-vertical-align: bottom;
-
+  display: table-cell;
+  vertical-align: bottom;
 }
 
-/*// Class
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}*/
-
 .kk {
-  /*display: table;*/
-   /*position:absolute;*/
   height:100%;
   width:100%;
 }
