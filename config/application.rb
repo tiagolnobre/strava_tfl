@@ -11,6 +11,11 @@ Dir[File.expand_path('../../app/helpers/*.rb', __FILE__)].each do |f|
   require f
 end
 
+# load helpers before api
+Dir[File.expand_path('../../api/v1/helpers/*.rb', __FILE__)].each do |f|
+  require f
+end
+
 Dir[File.expand_path('../../api/*.rb', __FILE__)].each do |f|
   require f
 end

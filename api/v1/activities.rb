@@ -3,18 +3,16 @@ require 'date'
 class Activities < Grape::API
   format :json
 
+  helpers SharedHelpers
+
   helpers do
-    def access_token
-      env['rack.session'][:access_token]
-    end
-
-    def client
-      @client ||= Strava::Api::V3::Client.new(access_token: access_token)
-    end
-
     def query_to_hash
       Rack::Utils.parse_nested_query(request.query_string)
     end
+  end
+
+  before do
+    access_token!
   end
 
   namespace :activities do
@@ -51,6 +49,7 @@ class Activities < Grape::API
       end
 
       { activities: number_activities,
+        weekends: params[:weekends],
         price: params[:price],
         total: number_activities * params[:price] }
     end
