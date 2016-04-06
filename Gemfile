@@ -18,5 +18,4 @@ group :development do
   gem "rack-test"
   gem "rspec-core"
   gem "rspec"
-  gem 'webmock'
 end

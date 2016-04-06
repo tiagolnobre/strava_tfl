@@ -24,11 +24,24 @@ describe StravaTFL::API do
     end
 
     context "when invalid token flow" do
-      it 'returns "error_message"=>"Invalid access token."' do
+      it '/auth/token returns "error_message"=>"Invalid access token."' do
         get '/auth/token'
         expect(last_response.status).to eq(401)
         expect(JSON.parse(last_response.body)).to eq({"error_message"=>"Invalid access token."})
       end
+
+      it 'api/v1/athlete returns "error_message"=>"Invalid access token."' do
+        get 'api/v1/athlete'
+        expect(last_response.status).to eq(401)
+        expect(JSON.parse(last_response.body)).to eq({"error_message"=>"Invalid access token."})
+      end
+
+      it 'api/v1/activities returns "error_message"=>"Invalid access token."' do
+        get 'api/v1/activities'
+        expect(last_response.status).to eq(401)
+        expect(JSON.parse(last_response.body)).to eq({"error_message"=>"Invalid access token."})
+      end
+
     end
   end
 end

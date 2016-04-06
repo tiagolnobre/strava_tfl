@@ -7,7 +7,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.4.0)
     ast (2.2.0)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -17,8 +16,6 @@ GEM
     coderay (1.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
-    crack (0.4.3)
-      safe_yaml (~> 1.0.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
@@ -45,7 +42,6 @@ GEM
     grape-swagger (0.10.4)
       grape (>= 0.8.0)
       grape-entity (< 0.5.0)
-    hashdiff (0.3.0)
     hashie (3.4.3)
     httparty (0.13.7)
       json (~> 1.8)
@@ -97,7 +93,6 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 0.3)
     ruby-progressbar (1.7.5)
-    safe_yaml (1.0.4)
     slop (3.6.0)
     strava-api-v3 (0.1.0)
       httparty
@@ -112,10 +107,6 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
-    webmock (1.24.2)
-      addressable (>= 2.3.6)
-      crack (>= 0.3.2)
-      hashdiff
 
 PLATFORMS
   ruby
@@ -134,7 +125,6 @@ DEPENDENCIES
   rspec-core
   rubocop
   strava-api-v3
-  webmock
 
 BUNDLED WITH
    1.11.2

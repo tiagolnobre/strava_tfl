@@ -1,6 +1,6 @@
 require "rspec"
-require 'webmock'
-include WebMock::API
+# require 'webmock'
+# include WebMock::API
 
 ENV['RACK_ENV'] ||= 'test'
 
