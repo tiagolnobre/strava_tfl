@@ -5,6 +5,9 @@ Strava TFL - How much i can save cycling instead of getting the tube
 
 The Application is using Strava Web Application Flow to request access token
 
+## WEB APP
+
+**http://stravatfl.herokuapp.com**
   
 
 ## API
@@ -25,7 +28,9 @@ The Application is using Strava Web Application Flow to request access token
 
   `[ { id: 535719699, resource_state: 2, external_id: "6DD68F3C-BEA7-4F65-BC92-3FAA88DF9C01", ... } ]`
 
-  
+## DOCS
+
+https://stravatfl.herokuapp.com/docs/v1.json
 
 ## Used Dependencies
 - strava-api-v3 - https://github.com/jaredholdcroft/strava-api-v3.git
