@@ -8,7 +8,8 @@ The Application is using Strava Web Application Flow to request access token
 ## WEB APP
 
 **http://stravatfl.herokuapp.com**
-  
+
+(in progress ...)  
 
 ## API
 
