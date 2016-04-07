@@ -28,6 +28,10 @@ The Application is using Strava Web Application Flow to request access token
 
   `[ { id: 535719699, resource_state: 2, external_id: "6DD68F3C-BEA7-4F65-BC92-3FAA88DF9C01", ... } ]`
 
+`GET` **api/v1/activities/count?before=1462060799&after=1459468800&price=6**  (Needs better naming params)
+ 
+ `{ activities: 30, weekends: false, price: 6, total: 180 }`
+
 ## DOCS
 
 https://stravatfl.herokuapp.com/docs/v1.json
