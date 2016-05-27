@@ -5,11 +5,11 @@ ruby '2.2.3'
 gem 'grape'
 gem 'grape-entity'
 gem 'grape-erb'
-gem 'json', "1.8.2"
-gem 'newrelic_rpm'
+gem 'grape_session'
 gem 'grape-swagger'
 gem "strava-api-v3"
-
+gem 'json', "1.8.2"
+gem 'newrelic_rpm'
 
 group :development do
   gem 'rake'
@@ -18,4 +18,5 @@ group :development do
   gem "rack-test"
   gem "rspec-core"
   gem "rspec"
+  gem 'rspec_junit_formatter', '0.2.2'
 end

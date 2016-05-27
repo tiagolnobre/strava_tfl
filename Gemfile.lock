@@ -1,37 +1,52 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (4.2.5.1)
+    actionpack (4.2.6)
+      actionview (= 4.2.6)
+      activesupport (= 4.2.6)
+      rack (~> 1.6)
+      rack-test (~> 0.6.2)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    actionview (4.2.6)
+      activesupport (= 4.2.6)
+      builder (~> 3.1)
+      erubis (~> 2.7.0)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    activesupport (4.2.6)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     ast (2.2.0)
+    awesome_print (1.6.1)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     builder (3.2.2)
-    coderay (1.1.0)
+    coderay (1.1.1)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
+    enumerable-lazy (0.0.1)
     equalizer (0.0.11)
     erubis (2.7.0)
-    grape (0.14.0)
+    grape (0.16.2)
       activesupport
       builder
       hashie (>= 2.1.0)
       multi_json (>= 1.3.2)
       multi_xml (>= 0.5.2)
+      mustermann19 (~> 0.4.3)
       rack (>= 1.3.0)
       rack-accept
-      rack-mount
       virtus (>= 1.0.0)
-    grape-entity (0.4.8)
+    grape-entity (0.5.1)
       activesupport
       multi_json (>= 1.3.2)
     grape-erb (0.0.1)
@@ -39,22 +54,49 @@ GEM
       grape
       i18n
       tilt
-    grape-swagger (0.10.4)
-      grape (>= 0.8.0)
-      grape-entity (< 0.5.0)
-    hashie (3.4.3)
+    grape-swagger (0.20.3)
+      awesome_print
+      grape (>= 0.12.0)
+      grape-entity
+    grape_cookies (0.0.1)
+      actionpack (~> 4.1, >= 4.1.0)
+      activesupport (~> 4.1, >= 4.1.0)
+      rack (~> 1.3, >= 1.3.0)
+      rack-accept (~> 0)
+      rack-mount (~> 0)
+    grape_session (0.0.3)
+      actionpack (>= 4.1.0)
+      activesupport (>= 4.1.0)
+      grape_cookies
+      rack (>= 1.3.0)
+      rack-accept
+      rack-mount
+    hashie (3.4.4)
+    httmultiparty (0.3.16)
+      httparty (>= 0.7.3)
+      mimemagic
+      multipart-post
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
     ice_nine (0.11.2)
     json (1.8.2)
+    loofah (2.0.3)
+      nokogiri (>= 1.5.9)
     method_source (0.8.2)
-    minitest (5.8.4)
-    multi_json (1.11.2)
+    mimemagic (0.3.1)
+    mini_portile2 (2.0.0)
+    minitest (5.9.0)
+    multi_json (1.12.1)
     multi_xml (0.5.5)
-    newrelic_rpm (3.14.2.312)
-    parser (2.3.0.2)
+    multipart-post (2.0.0)
+    mustermann19 (0.4.3)
+      enumerable-lazy
+    newrelic_rpm (3.15.2.317)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
+    parser (2.3.1.0)
       ast (~> 2.2)
     powerpack (0.1.1)
     pry (0.10.3)
@@ -71,8 +113,16 @@ GEM
       rack (>= 1.0.0)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rails-deprecated_sanitizer (1.0.3)
+      activesupport (>= 4.2.0.alpha)
+    rails-dom-testing (1.0.7)
+      activesupport (>= 4.2.0.beta, < 5.0)
+      nokogiri (~> 1.6.0)
+      rails-deprecated_sanitizer (>= 1.0.1)
+    rails-html-sanitizer (1.0.3)
+      loofah (~> 2.0)
     rainbow (2.1.0)
-    rake (10.5.0)
+    rake (11.1.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -86,22 +136,25 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    rubocop (0.37.0)
-      parser (>= 2.3.0.2, < 3.0)
+    rspec_junit_formatter (0.2.2)
+      builder (< 4)
+      rspec-core (>= 2, < 4, != 2.12.0)
+    rubocop (0.40.0)
+      parser (>= 2.3.1.0, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (~> 0.3)
-    ruby-progressbar (1.7.5)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.8.1)
     slop (3.6.0)
-    strava-api-v3 (0.1.0)
-      httparty
+    strava-api-v3 (0.6.0)
+      httmultiparty
       multi_json
     thread_safe (0.3.5)
-    tilt (2.0.2)
+    tilt (2.0.4)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    unicode-display_width (0.3.1)
+    unicode-display_width (1.0.5)
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -116,6 +169,7 @@ DEPENDENCIES
   grape-entity
   grape-erb
   grape-swagger
+  grape_session
   json (= 1.8.2)
   newrelic_rpm
   pry-remote
@@ -123,6 +177,7 @@ DEPENDENCIES
   rake
   rspec
   rspec-core
+  rspec_junit_formatter (= 0.2.2)
   rubocop
   strava-api-v3
 
