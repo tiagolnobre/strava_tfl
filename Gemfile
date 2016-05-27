@@ -18,5 +18,5 @@ group :development do
   gem "rack-test"
   gem "rspec-core"
   gem "rspec"
-  gem 'rspec_junit_formatter', '0.2.2'
+  gem 'rspec_junit_formatter'
 end
