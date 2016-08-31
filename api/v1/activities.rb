@@ -1,7 +1,10 @@
 require 'date'
 
 class Activities < Grape::API
-  format :json
+  content_type :html, 'text/html'
+  content_type :json, 'application/json'
+
+  default_format :json
 
   helpers SharedHelpers
 
@@ -37,7 +40,14 @@ class Activities < Grape::API
       requires :price, type: Float, desc: 'Price of the day journey'
     end
     get 'count' do
-      activities = client.list_athlete_activities(query_to_hash)
+      i = 1
+      activities = []
+      while activities_page = client.list_athlete_activities(query_to_hash.merge("page" => i))
+        break if activities_page.count == 0
+        i += 1
+        activities << activities_page
+      end
+      activities.flatten!
 
       number_activities = activities.count do |activity|
         if params[:weekends]
@@ -48,10 +58,19 @@ class Activities < Grape::API
         end
       end
 
-      { activities: number_activities,
+      @result = { activities: number_activities,
         weekends: params[:weekends],
         price: params[:price],
         total: number_activities * params[:price] }
+
+
+      if env['api.format'] == :json
+        @result
+      else
+        raw = File.read(File.expand_path('../../../app/layouts/result.html.erb', __FILE__))
+        ERB.new(raw).result(binding)
+      end
+
     end
   end
 end

@@ -19,4 +19,5 @@ group :development do
   gem "rspec-core"
   gem "rspec"
   gem 'rspec_junit_formatter'
+  gem 'shotgun'
 end

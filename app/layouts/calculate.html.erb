@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>How much do i save (Strava)</title>
+    <title>StravaTFL - How much do i save (Strava)</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/2.1.4/themes/smoothness/jquery-ui.css"/>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" type="text/css" href="css/custom.css">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
     <script type="text/javascript">
       jQuery(document).ready(function () {
-        jQuery('#initialdate').datepicker();
+        jQuery('#initial_date').datepicker();
       })
 
       jQuery(document).ready(function () {
-        jQuery('#finaldate').datepicker();
+        jQuery('#final_date').datepicker();
       })
     </script>
-
   </head>
-</head>
 <body>
   <nav class="navbar navbar-light bg-faded">
     <ul class="nav navbar-nav">
@@ -62,22 +58,26 @@
       </div>
     </ul>
   </nav>
+  <div class="row">
+  <div class="col-xs-6 col-sm-4"></div>
+  <div class="col-xs-6 col-sm-4">
   <div class="container-fluid kk">
     <div class="jumbotron im text-xs-center kk">
-      <form>
+      <form method="POST" action="/calculate">
         Initial Data:
-        <input id="initialdate" type="text">
+        <input id="initial_date" name="initial_date" type="text">
       </p>
       Final Date:
-      <input id="finaldate" type="text">
+      <input id=final_date name="final_date" type="text">
     </p>
     Daily price:
-    <input id="price" type="text">
+    <input id=price name="price" type="text">
   </p>
-  <button id="calculate" type="button">Calculate</button>
+  <button id="calculate" type="submit">Calculate</button>
 </form>
 </div>
 </div>
+  <div class="col-xs-6 col-sm-4"></div>
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script> -->
