@@ -38,10 +38,16 @@ class Activities < Grape::API
       optional :after, type: String, desc: 'seconds since UNIX epoch, result will start with activities whose start_date is after this value, sorted oldest first'
       optional :weekends, type: Boolean, desc: 'with or without weekends', default: false
       requires :price, type: Float, desc: 'Price of the day journey'
-      optional :json, type: Float, desc: 'Price of the day journey'
     end
     get 'count' do
-      activities = client.list_athlete_activities(query_to_hash)
+      i = 1
+      activities = []
+      while activities_page = client.list_athlete_activities(query_to_hash.merge("page" => i))
+        break if activities_page.count == 0
+        i += 1
+        activities << activities_page
+      end
+      activities.flatten!
 
       number_activities = activities.count do |activity|
         if params[:weekends]
