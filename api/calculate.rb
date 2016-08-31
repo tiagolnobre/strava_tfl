@@ -10,8 +10,8 @@ module StravaTFL
       end
 
       post do
-        initial_date = Time.strptime(params[:initial_date], "%m/%d/%Y").to_i
-        final_date = Time.strptime(params[:final_date], "%m/%d/%Y").to_i
+        initial_date = Time.strptime("#{params[:initial_date]} 00:00", "%m/%d/%Y %H:%M").to_i
+        final_date = Time.strptime("#{params[:final_date]} 00:00", "%m/%d/%Y %H:%M").to_i
 
         redirect "/api/v1/activities/count?before=#{final_date}&after=#{initial_date}&price=#{params[:price]}&format=html"
       end
