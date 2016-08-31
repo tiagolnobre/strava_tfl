@@ -5,7 +5,7 @@ module StravaTFL
   class API < Grape::API
     use Rack::Session::Cookie
 
-    use ApiErrorHandler
+    # use ApiErrorHandler
 
     mount StravaTFL::Index
     mount StravaTFL::Calculate

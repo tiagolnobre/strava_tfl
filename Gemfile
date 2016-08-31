@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.2.3'
+ruby '2.2.4'
 
 gem 'grape'
 gem 'grape-entity'
@@ -19,4 +19,5 @@ group :development do
   gem "rspec-core"
   gem "rspec"
   gem 'rspec_junit_formatter'
+  gem 'shotgun'
 end

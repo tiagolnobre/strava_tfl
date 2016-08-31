@@ -22,7 +22,7 @@ module StravaTFL
       get "callback" do
         env['rack.session'][:access_token] = get_access_token
 
-        redirect "token"
+        redirect "/calculate"
       end
 
       get "token" do

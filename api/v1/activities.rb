@@ -1,7 +1,10 @@
 require 'date'
 
 class Activities < Grape::API
-  format :json
+  content_type :html, 'text/html'
+  content_type :json, 'application/json'
+
+  default_format :json
 
   helpers SharedHelpers
 
@@ -35,6 +38,7 @@ class Activities < Grape::API
       optional :after, type: String, desc: 'seconds since UNIX epoch, result will start with activities whose start_date is after this value, sorted oldest first'
       optional :weekends, type: Boolean, desc: 'with or without weekends', default: false
       requires :price, type: Float, desc: 'Price of the day journey'
+      optional :json, type: Float, desc: 'Price of the day journey'
     end
     get 'count' do
       activities = client.list_athlete_activities(query_to_hash)
@@ -48,10 +52,19 @@ class Activities < Grape::API
         end
       end
 
-      { activities: number_activities,
+      @result = { activities: number_activities,
         weekends: params[:weekends],
         price: params[:price],
         total: number_activities * params[:price] }
+
+
+      if env['api.format'] == :json
+        @result
+      else
+        raw = File.read(File.expand_path('../../../app/layouts/result.html.erb', __FILE__))
+        ERB.new(raw).result(binding)
+      end
+
     end
   end
 end
