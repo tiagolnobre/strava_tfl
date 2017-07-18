@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/strava_tfl
     docker:
-      - image: circleci/ruby:2.4.1-node
+      - image: circleci/ruby:2.2.3-node
     steps:
       - checkout
 
