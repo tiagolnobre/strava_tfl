@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.2.7'
+ruby '2.5.3'
 
 gem 'grape'
 gem 'grape-entity'
@@ -8,7 +8,7 @@ gem 'grape-erb'
 gem 'grape_session'
 gem 'grape-swagger'
 gem "strava-api-v3"
-gem 'json', "1.8.2"
+gem 'json'
 gem 'newrelic_rpm'
 
 group :development do
