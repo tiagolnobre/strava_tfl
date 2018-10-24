@@ -3,7 +3,7 @@ module StravaTFL
   CONFIG_FILE["authentication"]["client_secret"] = ENV["STRAVA_API_SECRET"]
 
   class API < Grape::API
-    use Rack::Session::Cookie
+    use Rack::Session::Cookie, secret: ENV['SECRET']
 
     use ApiErrorHandler
 
