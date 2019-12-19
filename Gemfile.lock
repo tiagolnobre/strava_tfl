@@ -101,7 +101,7 @@ GEM
     pry-remote (0.1.8)
       pry (~> 0.9)
       slop (~> 3.0)
-    rack (1.6.11)
+    rack (1.6.12)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-mount (0.8.3)
