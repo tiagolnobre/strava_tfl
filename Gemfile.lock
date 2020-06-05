@@ -89,7 +89,7 @@ GEM
     mustermann (1.0.3)
     mustermann-grape (1.0.0)
       mustermann (~> 1.0.0)
-    newrelic_rpm (6.5.0.357)
+    newrelic_rpm (6.11.0.365)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     parallel (1.17.0)
