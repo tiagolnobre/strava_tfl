@@ -1,5 +1,6 @@
 # strava_tfl
 [![Build Status](https://travis-ci.org/tiagolnobre/strava_tfl.svg?branch=master)](https://travis-ci.org/tiagolnobre/strava_tfl) [![Heroku](https://heroku-badge.herokuapp.com/?app=stravatfl&root=healthcheck)](https://stravatfl.herokuapp.com)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftiagolnobre%2Fstrava_tfl.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftiagolnobre%2Fstrava_tfl?ref=badge_shield)
 
 Strava TFL - How much i can save cycling instead of getting the tube
 
@@ -39,3 +40,7 @@ https://stravatfl.herokuapp.com/docs/v1.json
 
 ## Used Dependencies
 - strava-api-v3 - https://github.com/jaredholdcroft/strava-api-v3.git
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftiagolnobre%2Fstrava_tfl.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftiagolnobre%2Fstrava_tfl?ref=badge_large)
